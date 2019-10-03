@@ -1,0 +1,110 @@
+//<CUSTOM CHECKBOX>====================================================
+.label {
+  cursor: pointer;
+  
+  input {
+    display: none;
+
+    &:checked {
+      &+.label__check {
+        &::before {
+          border-radius: 10px;
+        }
+
+        &::after {
+          opacity: 1;
+        }
+      } 
+    }
+  }
+}
+
+.label__check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: arial;
+  color: #1A237E;
+  font-weight: bold;
+  
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #7B1FA2;
+    margin-right: 5px;
+    transition: all .25s ease-in;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #7B1FA2;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all .25s ease-in;
+  }
+}
+//</CUSTOM CHECKBOX>====================================================
+
+//<CUSTOM RADIO>====================================================
+.label-radio {
+  margin-bottom: 10px;
+  cursor: pointer;
+  
+  input {
+    display: none;
+
+    &:checked {
+      &+.label-radio__check {
+
+        &::after {
+          opacity: 1;
+        }
+      } 
+    }
+  }
+}
+
+.label-radio__check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: arial;
+  color: #1A237E;
+  font-weight: bold;
+  
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #7B1FA2;
+    border-radius: 50%;
+    margin-right: 5px;
+    transition: all .2s ease-in;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #7B1FA2;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all .2s ease-in;
+  }
+}
+//</CUSTOM RADIO>====================================================

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Titles -->
+	<title>Калькулятор бюджета</title>
+	<meta name="keywords" content="Ключевые слова..." />
+	<meta name="description" content="Описание страницы..." />
+
+	<!-- Syles -->
+	<link rel="stylesheet" href="css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+
+	<!-- FavIcons -->
+	<link rel="shortcut icon" href="img/favicons/favicon-48x48.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+
+</head>
+<body>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">Вы используете <strong>устаревшую</strong> версию браузера. Пожалуйста <a href="http://browsehappy.com/">обновите свой браузер</a>.</p>
+	<![endif]-->
+	
+	<div class="wrapper">
+		<div class="container">
+			<h1 class="title main-title">Калькулятор бюджета</h1>
+			<div class="calc-body">
+				<div class="calc-body__column">
+					<h3 class="title calc-body__title">Доходы в месяц</h3>
+					<div class="inputs-block">
+						<input id="income-salary" type="number" placeholder="Зарплата">
+						<input id="income-freelance" type="number" placeholder="Фриланс">
+						<input id="income-extra" type="number" placeholder="Доп. доход">
+						<input id="income-extra-2" type="number" placeholder="Доп. доход-2">
+					</div>
+				</div>
+				<!-- /.calc-body__column -->
+				<div class="calc-body__column">
+					<h3 class="title calc-body__title">Обязательные расходы</h3>
+					<div class="inputs-block">
+						<input id="expenses-rent" type="number" placeholder="Квартира">
+						<input id="expenses-credit" type="number" placeholder="Кредит">
+						<input id="expenses-food" type="number" placeholder="Еда">
+						<input id="expenses-relax" type="number" placeholder="Развлечения">
+					</div>
+				</div>
+				<!-- /.calc-body__column -->
+				<div class="calc-body__column">
+					<div class="result-block">
+						<div class="result-block__item">
+							<h3 class="title calc-body__title">Доступно в месяц:</h3>
+							<input id="total-month" type="number" value="0" readonly>
+						</div>
+						<div class="result-block__item">
+							<h3 class="title calc-body__title">Доступно в день:</h3>
+							<input id="total-day" type="number" value="0" readonly>
+						</div>
+						<div class="result-block__item">
+							<h3 class="title calc-body__title">Накопим за год:</h3>
+							<input id="accumul-year" type="number" value="0" readonly>
+						</div>
+					</div>
+				</div>
+				<!-- /.calc-body__column -->
+				<div class="calc-body__column calc-body__column--4">
+					<div class="range-block">
+						<h4 class="title range-block__title">Копилка (Сколько откладываем?)</h4>
+						<div class="slider-range">
+							<div class="slider-range__line">
+								<div id="slider-range"></div>
+							</div>
+							<div class="slider-range__result">
+								<input type="text" id="precent" value="0">
+							</div>
+						</div>
+					</div>
+					<div class="total-result">
+						<div class="total-result__item">
+							<h4 class="title total-result__title">Копим:</h4>
+							<input type="number" id="accumulation" value="0" readonly>
+						</div>
+						<div class="total-result__item">
+							<h4 class="title total-result__title">Тратим:</h4>
+							<input type="number" id="spend" value="0" readonly>
+						</div>
+					</div>
+				</div>
+				<!-- /.calc-body__column -->
+			</div>
+			<!-- /.calc-body -->
+		</div>
+	</div>
+	<!-- /.wrapper -->
+	
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/html5shiv/respond.min.js"></script>
+<![endif]-->
+
+<!-- Scripts -->
+<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+<script src="libs/jq-ui/jquery-ui.min.js"></script>
+<!-- User scripts -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
